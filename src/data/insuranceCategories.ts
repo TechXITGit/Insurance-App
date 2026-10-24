@@ -1,0 +1,510 @@
+import { InsuranceCategory } from '../types/insurance';
+
+export const insuranceCategories: InsuranceCategory[] = [
+  {
+    id: 'health',
+    name: 'Health Insurance',
+    tagline: 'Comprehensive hospitalization and medical cover for you and family',
+    shortDescription: 'Cashless treatment at 10,000+ network hospitals with zero room rent capping and restoration benefits.',
+    fullDescription: 'Health insurance provides financial security against unexpected medical emergencies, hospitalization expenses, day-care procedures, ICU charges, and ambulance costs. Includes pre and post-hospitalization coverage, annual health checkups, and tax benefits under Section 80D of the Income Tax Act.',
+    iconName: 'heart-pulse',
+    popular: true,
+    serviceType: 'retail',
+    whoItSuits: [
+      'Individuals seeking independent financial cover against high medical costs',
+      'Families wanting a shared floater sum insured across parents and children',
+      'Senior citizens requiring specialized coverage with pre-existing disease riders',
+      'Young professionals building an early healthcare safety net',
+    ],
+    keyFeatures: [
+      'Cashless hospitalization across verified network hospitals',
+      'Automatic restoration of sum insured if exhausted during the policy year',
+      'Coverage for 500+ day-care procedures requiring less than 24h hospitalization',
+      'Cumulative No Claim Bonus (NCB) up to 100% sum insured enhancement',
+      'Tax savings up to ₹75,000 under Section 80D (self, family & senior parents)',
+    ],
+    limitationsAndExclusions: [
+      'Standard initial waiting period of 30 days (except accidental hospitalization)',
+      'Pre-existing disease (PED) waiting period of 24 to 36 months depending on insurer',
+      'Specific ailments (cataract, hernia, joint replacement) have 2-year waiting periods',
+      'Cosmetic surgery, weight loss treatments, and intentional self-harm are excluded',
+    ],
+    requiredDocuments: [
+      'Identity proof (PAN Card, Aadhaar Card, Passport or Voter ID)',
+      'Address proof (Utility bill, Aadhaar Card, Driving License)',
+      'Passport size photograph of proposed insured members',
+      'Medical examination reports (if age > 45 or prior medical history reported)',
+    ],
+    faqs: [
+      {
+        question: 'What is cashless hospitalization?',
+        answer: 'Cashless hospitalization allows you to get admitted and treated at a network hospital without paying medical bills upfront. The insurer settles approved expenses directly with the hospital via the Third Party Administrator (TPA).',
+      },
+      {
+        question: 'What is the pre-existing disease (PED) waiting period?',
+        answer: 'Any condition or disease diagnosed before taking the policy is considered pre-existing. As per IRDAI guidelines, claims for such conditions are payable after the waiting period (typically 2 to 3 years of continuous coverage) completes.',
+      },
+      {
+        question: 'Can I cover my parents under the same family floater?',
+        answer: 'While some plans permit senior parents in a floater, it is generally recommended to buy a separate senior citizen policy for parents so their higher age does not spike the floater premium for the entire family.',
+      },
+    ],
+  },
+  {
+    id: 'mediclaim',
+    name: 'Mediclaim',
+    tagline: 'Direct hospitalization expense reimbursement and cashless treatment',
+    shortDescription: 'Specified medical expense cover focused on actual in-patient hospital charges and doctor fees.',
+    fullDescription: 'Mediclaim is a traditional medical expense reimbursement and cashless policy. Unlike critical illness plans that pay a lump sum on diagnosis, Mediclaim reimburses the actual hospitalization and treatment bills up to the chosen sum insured.',
+    iconName: 'medical-bag',
+    popular: true,
+    serviceType: 'retail',
+    whoItSuits: [
+      'Budget-conscious individuals wanting straightforward hospital bill coverage',
+      'Salaried employees seeking supplementary medical cover beyond corporate group policies',
+      'Families looking for reliable hospitalization coverage with modest premiums',
+    ],
+    keyFeatures: [
+      'Coverage for room rent, nursing fees, doctor consultations, and surgeon charges',
+      'In-patient diagnostic tests, medications, ICU charges, and operation theater costs',
+      'Pre-hospitalization expenses (30 days) and post-discharge recovery (60 days)',
+      'Simple claims process through both cashless TPA and reimbursement modes',
+    ],
+    limitationsAndExclusions: [
+      'Hospitalization of less than 24 hours is not covered (unless listed day-care)',
+      'Room rent caps may apply (e.g., 1% of sum insured per day)',
+      'OPD dental treatment, spectacles, and hearing aids are typically excluded',
+    ],
+    requiredDocuments: [
+      'KYC documents of the policyholder',
+      'Age proof of all members',
+      'Existing policy copy (for continuity benefits if transitioning)',
+    ],
+    faqs: [
+      {
+        question: 'How is Mediclaim different from Health Insurance?',
+        answer: 'Mediclaim specifically covers hospitalization expenses and in-patient treatments. Comprehensive Health Insurance offers broader protections such as OPD covers, maternity, global emergency cover, and critical illness riders.',
+      },
+      {
+        question: 'What happens if my hospital is outside the cashless network?',
+        answer: 'You can pay the hospital bills directly upon discharge and submit original bills, discharge summary, and pharmacy receipts for reimbursement within 30 days.',
+      },
+    ],
+  },
+  {
+    id: 'travel',
+    name: 'Travel Insurance',
+    tagline: 'Worldwide medical and trip protection for domestic & international travel',
+    shortDescription: 'Emergency medical expenses, baggage loss, passport loss, and flight delay coverage abroad.',
+    fullDescription: 'Travel insurance secures your business trips, student visas, and family vacations against international medical emergencies, accidental hospitalizations, flight cancellations, trip delays, lost checked-in baggage, and loss of passport.',
+    iconName: 'airplane',
+    popular: true,
+    serviceType: 'retail',
+    whoItSuits: [
+      'International travelers heading to Schengen, USA, UK, Southeast Asia & worldwide',
+      'Students going overseas for undergraduate or postgraduate studies',
+      'Frequent corporate travelers needing annual multi-trip coverage',
+      'Domestic vacationers needing travel delay and luggage protection',
+    ],
+    keyFeatures: [
+      'Schengen-compliant medical cover of €30,000 / $50,000 to $500,000+',
+      'Cashless overseas hospitalization and emergency medical evacuation',
+      'Compensation for lost passport assistance, delayed baggage, and trip interruption',
+      'Personal liability cover in foreign jurisdictions',
+      'COVID-19 hospitalization and quarantine allowance covered per policy terms',
+    ],
+    limitationsAndExclusions: [
+      'Pre-existing disease flare-ups abroad are subject to strict life-saving emergency limits',
+      'Travel to high-risk sanctions-listed nations or war zones is excluded',
+      'Injuries sustained under the influence of alcohol or unauthorized adventure sports',
+    ],
+    requiredDocuments: [
+      'Passport details of all travelers',
+      'Flight itinerary and travel dates',
+      'Student admission letter (for student overseas travel plans)',
+    ],
+    faqs: [
+      {
+        question: 'Is travel insurance mandatory for Schengen visa?',
+        answer: 'Yes, European Schengen visa guidelines mandate travel health insurance with a minimum medical coverage of €30,000 including medical evacuation and repatriation.',
+      },
+      {
+        question: 'When should I purchase my travel policy?',
+        answer: 'It is recommended to buy travel insurance right after booking flights or visa slots so that trip cancellation benefits apply if unexpected events occur prior to departure.',
+      },
+    ],
+  },
+  {
+    id: 'term_assurance',
+    name: 'Term Assurance',
+    tagline: 'High sum assured pure life cover at affordable premiums for family protection',
+    shortDescription: 'Safeguard your family financial future with pure protection cover up to 85 years.',
+    fullDescription: 'Term insurance is pure life protection. In the unfortunate event of the policyholders demise during the policy term, the full nominee sum assured is paid out to ensure family liabilities, loans, children education, and lifestyle costs are fully protected.',
+    iconName: 'shield-account',
+    popular: true,
+    serviceType: 'retail',
+    whoItSuits: [
+      'Primary earning members of families with financial dependents',
+      'Individuals with home loans, personal liabilities, or business loans',
+      'Young parents planning long-term financial security for children',
+      'Self-employed professionals building an estate protection shield',
+    ],
+    keyFeatures: [
+      'High life cover (₹50 Lakhs to ₹5 Crores+) at nominal annual premiums',
+      'Options for regular pay, limited pay (pay for 5/10 years), or return of premium (TROP)',
+      'Flexible payout options: lump-sum or monthly income for the nominee',
+      'Add-on critical illness and accidental disability riders available',
+      'Tax deduction under Section 80C and tax-free death benefit under Section 10(10D)',
+    ],
+    limitationsAndExclusions: [
+      'Suicide exclusion in the first 12 months from policy inception',
+      'Non-disclosure of smoking/tobacco consumption or medical history can lead to claim repudiation',
+      'Pure term plans do not yield maturity returns if the insured survives the term (unless TROP is chosen)',
+    ],
+    requiredDocuments: [
+      'Income proof (Last 3 months salary slips, Form 16, or 2 years ITR)',
+      'Bank statements of the past 6 months',
+      'Identity and address verification documents',
+      'Tele-medical or physical health checkup reports',
+    ],
+    faqs: [
+      {
+        question: 'How much term cover should I buy?',
+        answer: 'Financial advisors recommend choosing a sum assured equal to at least 15 to 20 times your current annual income plus any outstanding home loans or major liabilities.',
+      },
+      {
+        question: 'Can I add critical illness cover to my term plan?',
+        answer: 'Yes, most insurers offer an accelerated or comprehensive critical illness rider that pays a fixed lump sum upon diagnosis of conditions like heart attack, stroke, or cancer.',
+      },
+    ],
+  },
+  {
+    id: 'accident',
+    name: 'Accident Policy',
+    tagline: 'Dedicated cover for accidental death, permanent disability, and loss of income',
+    shortDescription: '24x7 worldwide financial protection against road mishaps, fractures, and disability.',
+    fullDescription: 'Personal accident insurance offers immediate financial protection against injuries or death caused exclusively by violent, accidental, external and visible means. It covers permanent total disability, permanent partial disability, temporary total disability (weekly cash allowance), and child education support.',
+    iconName: 'shield-alert',
+    popular: true,
+    serviceType: 'retail',
+    whoItSuits: [
+      'Daily commuters and professionals with significant travel or field duty',
+      'Industrial workers, drivers, and site engineers exposed to physical risk',
+      'Sole breadwinners needing income replacement if temporary disability strikes',
+    ],
+    keyFeatures: [
+      '100% sum insured payout on accidental death',
+      'Up to 100% payout for permanent total disability (loss of limbs, eyesight)',
+      'Weekly income compensation for temporary total disablement and bed-rest',
+      'Education fund grant for dependent children in catastrophic events',
+      'No medical tests required for most age groups up to age 65',
+    ],
+    limitationsAndExclusions: [
+      'Natural death, illnesses, and infections are not covered under accident policies',
+      'Participation in hazardous sports or unauthorized racing',
+      'Accidents occurring while driving under influence of narcotics or alcohol',
+    ],
+    requiredDocuments: [
+      'Basic KYC documents',
+      'Occupation verification details',
+      'Nominee details and bank account proof',
+    ],
+    faqs: [
+      {
+        question: 'Does health insurance already cover accidents?',
+        answer: 'Health insurance covers hospitalization medical bills. Personal accident policy provides a financial compensation lump sum for disability or loss of life, plus weekly replacement income even without hospital bills.',
+      },
+    ],
+  },
+  {
+    id: 'group',
+    name: 'Group Insurance',
+    tagline: 'Customized group health, term, and gratuity covers for organizations & societies',
+    shortDescription: 'Tailored group coverage for registered associations, housing societies, and member groups.',
+    fullDescription: 'Group insurance provides collective risk coverage for members of an association, club, affinity group, or cooperative society. Enjoys standardized pricing, waiver of waiting periods, and seamless centralized digital administration.',
+    iconName: 'account-group',
+    popular: false,
+    serviceType: 'inquiry',
+    whoItSuits: [
+      'Cooperative societies and housing welfare associations',
+      'Trade associations, clubs, and professional member bodies',
+      'Startups with non-standard team structures looking for group pooling',
+    ],
+    keyFeatures: [
+      'Day 1 coverage for pre-existing diseases with zero waiting period',
+      'Maternity and newborn child cover from first day of enrollment',
+      'Standardized claims procedure through a dedicated group relationship manager',
+      'Modular sum insured tiers based on member categories',
+    ],
+    limitationsAndExclusions: [
+      'Coverage is active only while the individual remains a valid group member',
+      'Subject to minimum group size guidelines (typically 10+ members)',
+    ],
+    requiredDocuments: [
+      'Group / Association registration certificate',
+      'PAN and GST registration details of the association',
+      'Census file of members with age, relation, and sum insured tier',
+    ],
+    faqs: [
+      {
+        question: 'What is the minimum member count for a group policy?',
+        answer: 'Most Indian insurers require a minimum of 10 to 25 members to underwrite a legitimate group health or group personal accident policy.',
+      },
+    ],
+  },
+  {
+    id: 'corporate',
+    name: 'Corporate Plans',
+    tagline: 'Employee health benefits, group personal accident, and executive wellness',
+    shortDescription: 'Comprehensive corporate medical covers, OPD allowances, and mental health benefits for HR leaders.',
+    fullDescription: 'Empower your workforce with enterprise-grade employee health insurance (GMC), group personal accident (GPA), group term life (GTL), and modern wellness programs. Includes cashless TPA desk, digital health cards, teleconsultations, and custom claim escalation support.',
+    iconName: 'office-building',
+    popular: false,
+    serviceType: 'inquiry',
+    whoItSuits: [
+      'Human Resources managers and Founders designing competitive compensation packages',
+      'Companies scaling from 10 to 5,000+ employees seeking customizable health benefits',
+      'Enterprises needing custom OPD subsidies, parental covers, and mental wellness',
+    ],
+    keyFeatures: [
+      'Group Medical Cover (GMC) with customizable parental inclusion',
+      'Zero waiting period for all pre-existing illnesses and maternity',
+      'Corporate wellness dashboard with teleconsultation, lab tests, and gym perks',
+      'Dedicated claims escalation specialist and cashless corporate helpdesk',
+    ],
+    limitationsAndExclusions: [
+      'Policy ceases upon employee resignation or exit from the company',
+      'Terms are tailored per corporate agreement and underwriting guidelines',
+    ],
+    requiredDocuments: [
+      'Company Certificate of Incorporation & GSTIN',
+      'Employee census spreadsheet (Names, DOB, Designations, Dependents)',
+      'Previous policy claims dump (for companies switching insurers)',
+    ],
+    faqs: [
+      {
+        question: 'Can employees port their corporate cover to retail upon leaving?',
+        answer: 'Yes, as per IRDAI guidelines, employees leaving a corporate GMC are eligible to port to an individual retail health plan with the same insurer without losing waiting-period credits.',
+      },
+    ],
+  },
+  {
+    id: 'renew',
+    name: 'Renew Policy',
+    tagline: 'Instant policy renewal with zero lapse in continuity benefits & NCB bonus',
+    shortDescription: 'Renew your existing health, motor, or life policy online with instant confirmation.',
+    fullDescription: 'Keep your insurance safety net active without losing accumulated benefits such as waiting period credits, cumulative No Claim Bonus (NCB), and pre-existing disease continuity. Enter your policy number to verify details and complete secure renewal.',
+    iconName: 'refresh-circle',
+    popular: false,
+    serviceType: 'service',
+    whoItSuits: [
+      'Policyholders whose insurance expiry date is within the next 30 to 45 days',
+      'Individuals in their statutory 30-day grace period wanting to restore coverage',
+      'Existing customers needing fast, verified policy renewal',
+    ],
+    keyFeatures: [
+      'Preserve earned No Claim Bonus and waiting-period credits',
+      'Instant renewal receipt and updated digital policy document download',
+      'Option to upgrade sum insured or add riders during the renewal window',
+      'Automated reminder integration to avoid accidental policy lapse',
+    ],
+    limitationsAndExclusions: [
+      'Policies lapsed beyond the 30-day grace period may require fresh medical underwriting',
+      'Claims occurring during an unrenewed lapsed window are strictly not payable',
+    ],
+    requiredDocuments: [
+      'Existing policy number and provider name',
+      'Registered mobile number or email for OTP verification',
+    ],
+    faqs: [
+      {
+        question: 'What is the grace period for health insurance renewal?',
+        answer: 'IRDAI provides a 30-day grace period from the expiry date to pay the renewal premium while retaining waiting-period continuity. However, any illness contracted during the lapsed gap days is not covered.',
+      },
+    ],
+  },
+  {
+    id: 'portability',
+    name: 'Port Existing Policy',
+    tagline: 'Switch to a better insurer without losing accumulated waiting period credits',
+    shortDescription: 'Transfer your health policy to another insurer smoothly under IRDAI portability rules.',
+    fullDescription: 'Under IRDAI regulations, health insurance policyholders have the legal right to port their policy to another insurer without losing accumulated credits for pre-existing disease waiting periods and time-bound ailment waiting periods.',
+    iconName: 'swap-horizontal',
+    popular: false,
+    serviceType: 'service',
+    whoItSuits: [
+      'Customers dissatisfied with their current insurers claim service or cashless network',
+      'Individuals facing unreasonable renewal premium hikes from their existing insurer',
+      'Policyholders seeking better restoration features or higher sum insured options',
+    ],
+    keyFeatures: [
+      'Full transfer of waiting period credits earned with the previous insurer',
+      'Zero penalty for switching to a higher rated customer service provider',
+      'Option to enhance sum insured during the portability application',
+      'Transparent draft tracking and digital submission',
+    ],
+    limitationsAndExclusions: [
+      'Portability request must be initiated at least 45 days prior to policy renewal date',
+      'Acceptance is subject to the new insurers underwriting policy and medical history review',
+      'Credits apply only up to the previous sum insured amount; enhanced portions follow new waiting periods',
+    ],
+    requiredDocuments: [
+      'Past 3 consecutive years policy copies',
+      'Claims history certificate or self-declaration of claims',
+      'Current renewal notice and complete medical records if previous claims existed',
+    ],
+    faqs: [
+      {
+        question: 'When should I apply for health policy portability?',
+        answer: 'As per IRDAI guidelines, you must submit your portability application to the new insurer at least 45 days before your current policy expiry date.',
+      },
+      {
+        question: 'Can the new insurer reject my portability request?',
+        answer: 'Yes, underwriting guidelines permit the new insurer to assess medical risk and either accept with normal rates, apply medical loading, or decline based on board-approved policy.',
+      },
+    ],
+  },
+  {
+    id: 'endowment',
+    name: 'Endowment Plans',
+    tagline: 'Life protection combined with guaranteed savings and bonus accrual',
+    shortDescription: 'Disciplined savings with a guaranteed maturity corpus and life protection shield.',
+    fullDescription: 'Endowment plans offer the dual benefit of life coverage and systematic long-term wealth accumulation. If the policyholder survives the chosen tenure, the full sum assured along with accrued bonuses is paid out. In case of untimely demise, the nominee receives the life cover.',
+    iconName: 'piggy-bank',
+    popular: false,
+    serviceType: 'retail',
+    whoItSuits: [
+      'Risk-averse investors seeking capital safety alongside life insurance',
+      'Parents building a guaranteed education fund for their children',
+      'Individuals planning disciplined milestone savings for 10, 15, or 20 years',
+    ],
+    keyFeatures: [
+      'Guaranteed sum assured on maturity or unfortunate demise',
+      'Annual simple or compound reversionary bonuses declared by the insurer',
+      'Loan facility against policy surrender value after 2 to 3 years',
+      'Tax exemption on maturity proceeds under Section 10(10D) as per current laws',
+    ],
+    limitationsAndExclusions: [
+      'Early surrender within the first 2-3 years leads to significant value loss',
+      'Bonus rates are declared annually based on insurer performance and are not guaranteed',
+    ],
+    requiredDocuments: [
+      'Identity and age proof of the policyholder and nominee',
+      'Income proof for underwriting verification',
+      'Bank details for maturity and bonus direct credits',
+    ],
+    faqs: [
+      {
+        question: 'Can I take a loan against an endowment plan?',
+        answer: 'Yes, once an endowment policy acquires a guaranteed surrender value (usually after paying premiums for 2 to 3 continuous years), you can avail a loan up to 80-90% of the surrender value.',
+      },
+    ],
+  },
+  {
+    id: 'whole_life',
+    name: 'Whole Life Plans',
+    tagline: 'Lifelong financial security and generational wealth transfer up to 100 years',
+    shortDescription: 'Cover extending for your entire lifetime with legacy creation for your heirs.',
+    fullDescription: 'A whole life insurance policy protects the insured up to age 99 or 100. It guarantees a financial legacy for children and grandchildren, with flexible premium payment terms such as paying for 10 or 15 years while enjoying lifelong protection.',
+    iconName: 'shield-check',
+    popular: false,
+    serviceType: 'retail',
+    whoItSuits: [
+      'Individuals focused on estate planning and generational wealth transfer',
+      'Earning members wanting life cover that never expires during their lifetime',
+      'Professionals seeking limited premium payment with lifelong security',
+    ],
+    keyFeatures: [
+      'Coverage up to 99 or 100 years of age',
+      'Limited pay options: finish paying premiums in 10, 15, or 20 years',
+      'Guaranteed death benefit payout to nominees at any age',
+      'Cash surrender value accumulation with maturity endowment at age 100',
+    ],
+    limitationsAndExclusions: [
+      'Higher premiums compared to pure term assurance plans',
+      'Exclusion for suicide in the initial 12 months from inception',
+    ],
+    requiredDocuments: [
+      'KYC documents of policyholder and nominees',
+      'Detailed income verification and bank statements',
+      'Medical examination documentation',
+    ],
+    faqs: [
+      {
+        question: 'What happens when the insured reaches 100 years?',
+        answer: 'If the insured reaches age 100, the policy matures and the full sum assured along with accrued bonuses is paid to the policyholder as a maturity endowment.',
+      },
+    ],
+  },
+  {
+    id: 'money_back',
+    name: 'Money Back Plans',
+    tagline: 'Periodic liquidity payouts during the policy term with life protection',
+    shortDescription: 'Regular survival benefit installments every few years to meet planned milestones.',
+    fullDescription: 'Money Back insurance plans pay a predetermined percentage of the sum assured at regular intervals during the policy tenure as survival benefits. The remaining balance plus accrued bonuses is disbursed at maturity, while full life cover remains intact throughout.',
+    iconName: 'cash-sync',
+    popular: false,
+    serviceType: 'retail',
+    whoItSuits: [
+      'Individuals requiring predictable liquidity every 3 to 5 years for family expenses',
+      'Parents planning milestone costs like school admissions, coaching, or weddings',
+      'Investors wanting life cover without locking funds completely until maturity',
+    ],
+    keyFeatures: [
+      'Periodic survival payouts (e.g., 20% sum assured every 4th or 5th year)',
+      'Full sum assured death benefit payable to nominee regardless of past survival payouts',
+      'Maturity bonus payment at the end of the policy term',
+      'Tax-free survival and maturity payouts under Section 10(10D)',
+    ],
+    limitationsAndExclusions: [
+      'Returns are moderate compared to market-linked instruments',
+      'Survival payout schedules are fixed at issuance and cannot be arbitrarily shifted',
+    ],
+    requiredDocuments: [
+      'Standard KYC documents',
+      'Bank mandate for automatic survival benefit payouts',
+      'Income verification documents',
+    ],
+    faqs: [
+      {
+        question: 'Are survival payouts deducted from the death benefit if the insured passes away?',
+        answer: 'No, in genuine Indian Money Back policies, the full sum assured is paid to the nominee upon demise without deducting any previously received survival benefits.',
+      },
+    ],
+  },
+  {
+    id: 'riders',
+    name: 'Riders / Add-on Covers',
+    tagline: 'Enhance your base policy with critical illness, accidental, and waiver covers',
+    shortDescription: 'Cost-effective supplementary protections attached to your base insurance plan.',
+    fullDescription: 'Insurance riders are optional add-ons that attach to your primary health or life policy to expand coverage for specific risks. Common riders include Critical Illness Cover, Accidental Death & Dismemberment, Hospital Daily Cash, and Waiver of Premium.',
+    iconName: 'shield-plus',
+    popular: false,
+    serviceType: 'retail',
+    whoItSuits: [
+      'Existing policyholders wanting targeted protection without buying a second policy',
+      'Individuals with family history of critical ailments such as cancer or cardiac events',
+      'Sole breadwinners wanting premium waiver security in case of total disability',
+    ],
+    keyFeatures: [
+      'Significantly lower cost than purchasing standalone separate policies',
+      'Waiver of Premium ensures policy stays active even if disability prevents payments',
+      'Lump-sum payouts under Critical Illness rider on verified first diagnosis',
+      'Hospital Cash rider provides daily allowance for non-medical ancillary expenses',
+    ],
+    limitationsAndExclusions: [
+      'Riders cannot be purchased standalone without a valid base policy',
+      'Rider sum assured cannot exceed the base policys primary sum assured under IRDAI norms',
+    ],
+    requiredDocuments: [
+      'Active base policy number and schedule',
+      'Health declaration specific to the requested rider',
+    ],
+    faqs: [
+      {
+        question: 'What is the Waiver of Premium rider?',
+        answer: 'If the policyholder suffers permanent total disability or contracts a critical illness covered by the rider, all future premium payments for the base policy are completely waived while full coverage continues uninterrupted.',
+      },
+    ],
+  },
+];
